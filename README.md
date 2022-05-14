@@ -47,8 +47,14 @@ touch src/utils/all_utils.py
 touch setup.py
 ```
 
-```
+```bash
 touch artifacts/.gitignore
 dvc repro
+```
+
+## stage02
+```bash
+touch src/stage_02_split_data.py
+
 ```
 

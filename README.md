@@ -58,3 +58,9 @@ touch src/stage_02_split_data.py
 
 ```
 
+## stage 03
+```bash
+touch src/stage_03_train.py
+dvc dag
+
+```

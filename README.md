@@ -33,4 +33,22 @@ conda activate dvc
 ```bash
 pip install -r requirements.txt
 ```
+
+```bash
+dvc init
+mkdir -p src/utils
+touch src/__init__.py
+touch src/utils/__init__.py
+touch params.yaml dvc.yaml
+mkdir config
+touch config/config.yaml
+touch src/stage_01_load_save.py
+touch src/utils/all_utils.py
+touch setup.py
 ```
+
+```
+touch artifacts/.gitignore
+
+```
+

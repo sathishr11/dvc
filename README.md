@@ -49,6 +49,6 @@ touch setup.py
 
 ```
 touch artifacts/.gitignore
-
+dvc repro
 ```
 

@@ -1,4 +1,7 @@
 stages:
+  # # to run a step always use without deps and outs
+  # always_run:
+  #   cmd: python -c "print('hello')"
   load_data:
     cmd: python src/stage_01_load_save.py -c config/config.yaml
     deps:

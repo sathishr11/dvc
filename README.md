@@ -64,3 +64,10 @@ touch src/stage_03_train.py
 dvc dag
 
 ```
+
+## stage 04
+```bash
+cp src/stage_03_train.py src/stage_04_evaluate.py
+dvc dag
+
+```

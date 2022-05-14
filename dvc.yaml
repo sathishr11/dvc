@@ -33,7 +33,6 @@ stages:
       - src/utils/all_utils.py
       - config/config.yaml
       - artifacts/split_data_dir/train.csv
-      - artifacts/split_data_dir/test.csv
     params:
       - model_params.ElasticNet.alpha
       - model_params.ElasticNet.l1_ratio
@@ -41,3 +40,13 @@ stages:
     outs:
       - artifacts/model_dir/ElasticNet.pkl
     
+  evaluate_model:
+    cmd: python src/stage_04_evaluate.py -c config/config.yaml -p params.yaml
+    deps:
+      - src/stage_04_evaluate.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/split_data_dir/test.csv
+      - artifacts/model_dir/ElasticNet.pkl
+    outs:
+      - artifacts/reports_dir/reports.json

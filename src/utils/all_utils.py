@@ -1,5 +1,6 @@
 import yaml
 import os
+import json
 
 def read_yaml(path_to_yaml: str)-> dict:
     with open(path_to_yaml) as yaml_file:
@@ -22,3 +23,16 @@ def save_dataframe(data, data_path, index=False):
     """
     data.to_csv(data_path, index=index)
     print(f'Data saved to {data_path}')
+
+def save_evaluation_reports(reports: dict, reports_path: str):
+    """Save the evaluation reports to a csv file
+
+    Args:
+        reports (dict): dictionary of evaluation reports
+        reports_path (string): directory where the evaluation reports needs to be saved
+    """
+    with open(reports_path, 'w') as f:
+        # for key, value in reports.items():
+        #     f.write(f'{key}: {value}\n')
+        json.dump(reports, f, indent=4)
+    print(f'Evaluation reports saved to {reports_path}')

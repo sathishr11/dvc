@@ -10,3 +10,6 @@ artifacts:
   test_file: test.csv
   model_dir: model_dir
   model_file: ElasticNet.pkl
+  reports_dir: reports_dir
+  reports_file: reports.json
+

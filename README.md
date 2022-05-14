@@ -29,3 +29,8 @@ content of the gitignore can be found from reference repository
 conda create -n dvc python=3.7 -y
 conda activate dvc
 ```
+
+```bash
+pip install -r requirements.txt
+```
+```
